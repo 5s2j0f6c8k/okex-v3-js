@@ -203,7 +203,7 @@ https://www.npmjs.com/package/okex-v3
 npm i okex-v3 --save
 ```
 
-## How to use
+## 钱包API 使用
 ```js
 
 import * as okex from 'okex-v3'
@@ -237,3 +237,135 @@ restWalletApi.getCurrencies().then(function (res) {
 ```
 
 
+## 合约API 使用
+```js
+
+import * as okex from 'okex-v3'
+
+import log4js, { Logger } from 'log4js'
+
+log4js.configure({
+    appenders: {
+        console: { type: 'console' }
+    },
+    categories: { default: { appenders: ['console'], level: 'all' } }
+})
+let loggger = log4js.getLogger()
+
+
+//url:https://www.okex.com 
+
+//accessKey 您在创建API密钥时获得
+
+//passphrase 您在创建API密钥时指定
+
+//secretKey 您在创建API密钥时获得
+
+let restFuturesApi = new okex.RestFuturesApi("https://www.okex.com", "", "", "")
+
+restFuturesApi.getFuturesPosition().then(function (res) {
+    res.json().then(function (json) {
+        loggger.debug(json)
+    })
+})
+```
+
+
+## 币币交易 使用
+```js
+
+import * as okex from 'okex-v3'
+
+import log4js, { Logger } from 'log4js'
+
+log4js.configure({
+    appenders: {
+        console: { type: 'console' }
+    },
+    categories: { default: { appenders: ['console'], level: 'all' } }
+})
+let loggger = log4js.getLogger()
+
+
+//url:https://www.okex.com 
+
+//accessKey 您在创建API密钥时获得
+
+//passphrase 您在创建API密钥时指定
+
+//secretKey 您在创建API密钥时获得
+
+let restSpotApi = new okex.RestSpotApi("https://www.okex.com", "", "", "")
+
+restSpotApi.getAccounts().then(function (res) {
+    res.json().then(function (json) {
+        loggger.debug(json)
+    })
+})
+```
+
+## 币币杠杆 使用
+```js
+
+import * as okex from 'okex-v3'
+
+import log4js, { Logger } from 'log4js'
+
+log4js.configure({
+    appenders: {
+        console: { type: 'console' }
+    },
+    categories: { default: { appenders: ['console'], level: 'all' } }
+})
+let loggger = log4js.getLogger()
+
+
+//url:https://www.okex.com 
+
+//accessKey 您在创建API密钥时获得
+
+//passphrase 您在创建API密钥时指定
+
+//secretKey 您在创建API密钥时获得
+
+let restMarginApi = new okex.RestMarginApi("https://www.okex.com", "", "", "")
+
+restMarginApi.getMarginAccounts().then(function (res) {
+    res.json().then(function (json) {
+        loggger.debug(json)
+    })
+})
+```
+
+## Ett 使用
+```js
+
+import * as okex from 'okex-v3'
+
+import log4js, { Logger } from 'log4js'
+
+log4js.configure({
+    appenders: {
+        console: { type: 'console' }
+    },
+    categories: { default: { appenders: ['console'], level: 'all' } }
+})
+let loggger = log4js.getLogger()
+
+
+//url:https://www.okex.com 
+
+//accessKey 您在创建API密钥时获得
+
+//passphrase 您在创建API密钥时指定
+
+//secretKey 您在创建API密钥时获得
+
+let restEttApi = new okex.RestEttApi("https://www.okex.com", "", "", "")
+
+restEttApi.getEttAccounts().then(function (res) {
+    res.json().then(function (json) {
+        loggger.debug(json)
+    })
+})
+```
