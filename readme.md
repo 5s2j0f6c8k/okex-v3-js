@@ -9,13 +9,16 @@
 ## 类说明
 构造函数参数 
 url:https://www.okex.com 
+
 accessKey 您在创建API密钥时获得
+
 passphrase 您在创建API密钥时指定
+
 secretKey 您在创建API密钥时获得
 
 
->>> RestCommonApi.js 父类
->>>> getOkexTime 获取服务时间
+### RestCommonApi.js 父类
+1. getOkexTime 获取服务时间
 >>
 >>> RestWalletApi.js 钱包API
 >>>> getCurrencies 获取币种列表
