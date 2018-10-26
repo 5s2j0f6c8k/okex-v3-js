@@ -3,6 +3,13 @@ import httpPost from './common/httpPost'
 import httpDelete from './common/httpDelete'
 import RestCommonApi from './RestCommonApi'
 
+/**
+ * Okex V3 Rest ett Api
+ * 作者: qugang
+ * 邮箱: qgass@163.com
+ * 创建时间：2018/10/26
+ * @class RestWalletApi
+ */
 export default class RestEttApi extends RestCommonApi{
     constructor(url, accessKey, passphrase,secretKey) {
         super(url)
