@@ -1,0 +1,24 @@
+{
+  "name": "okex-v3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "commonApi.js",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "chai": "^4.2.0",
+    "crypto-js": "^3.1.9-1",
+    "log4js": "^3.0.6",
+    "mocha": "^5.2.0",
+    "node-fetch": "^2.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "mocha --compilers js:babel-core/register --timeout 10000"
+  },
+  "author": "",
+  "license": "ISC"
+}
