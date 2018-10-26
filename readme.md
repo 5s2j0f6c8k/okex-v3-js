@@ -193,49 +193,47 @@ getFuturesInstrumentsLiquidation(instrument_id,
 
 getFuturesInstrumentsHolds(instrument_id) 获取合约挂单冻结数量
 
+## npm package url
+
+https://www.npmjs.com/package/okex-v3
+
 ## 安装包
 
 ```js
-npm install 
-```
-
-## Testing
-
-```js
-npm test
-```
-
-## 配置日志
-
-```js
-import log4js, { Logger } from 'log4js'
-
-    log4js.configure({
-        appenders: {
-            console: { type: 'console' }
-        },
-        categories: { default: { appenders: ['console'], level: 'all' } }
-    })
-    let loggger = log4js.getLogger()
-    loggger.debug("hello world")
+npm i okex-v3 --save
 ```
 
 ## How to use
 ```js
-import RestWalletApi from '../src/RestWalletApi'
+
+import * as okex from 'okex-v3'
+
+import log4js, { Logger } from 'log4js'
+
 log4js.configure({
-        appenders: {
-            console: { type: 'console' }
-        },
-        categories: { default: { appenders: ['console'], level: 'all' } }
-    })
+    appenders: {
+        console: { type: 'console' }
+    },
+    categories: { default: { appenders: ['console'], level: 'all' } }
+})
 let loggger = log4js.getLogger()
 
+
+//url:https://www.okex.com 
+
+//accessKey 您在创建API密钥时获得
+
+//passphrase 您在创建API密钥时指定
+
+//secretKey 您在创建API密钥时获得
+
+let restWalletApi = new okex.RestWalletApi("https://www.okex.com", "", "", "")
+
 restWalletApi.getCurrencies().then(function (res) {
-            res.json().then(function (json) {
-                loggger.debug(json)
-            })
-        })
+    res.json().then(function (json) {
+        loggger.debug(json)
+    })
+})
 ```
 
 

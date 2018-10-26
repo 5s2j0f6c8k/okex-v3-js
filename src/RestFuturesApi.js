@@ -104,7 +104,7 @@ export default class RestFuturesApi extends RestCommonApi {
      * @returns
      * @memberof RestFuturesApi
      */
-    async postFuturesLeverage(currency, leverage, currency) {
+    async postFuturesLeverage(currency,leverage) {
         return await httpPost(`${this.url}/api/futures/v3/accounts/${currency}/leverage`, {
             leverage: leverage,
             currency: currency

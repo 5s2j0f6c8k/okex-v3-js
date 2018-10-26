@@ -1,8 +1,13 @@
 {
   "name": "okex-v3",
-  "version": "1.0.0",
-  "description": "",
-  "main": "commonApi.js",
+  "version": "0.0.9",
+  "description": "okex v3",
+  "keyword":[
+    "okex",
+    "okex-v3",
+    "v3"
+  ],
+  "main": "./lib/index.js",
   "dependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
@@ -17,8 +22,12 @@
   },
   "devDependencies": {},
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register --timeout 10000"
+    "test": "mocha --compilers js:babel-core/register --timeout 10000",
+    "compile": "babel -d lib/ src/",
+    "prepublish": "npm run compile"
   },
-  "author": "",
+  "readme":"使用手册https://github.com/qugang/okex-v3-js/blob/master/readme.md",
+  "readmeFilename":"readme.md",
+  "author": "qgass@163.com",
   "license": "ISC"
 }
