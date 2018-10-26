@@ -1,8 +1,8 @@
-import RestMarginApi from '../src/RestMarginApi'
+import restFuturesApi from '../src/RestFuturesApi'
 import chai from 'chai'
 import log4js, { Logger } from 'log4js'
 let expect = chai.expect
-describe('RestMarginApi 测试 ', function () {
+describe('RestFuturesApi 测试 ', function () {
 
     log4js.configure({
         appenders: {
@@ -13,9 +13,9 @@ describe('RestMarginApi 测试 ', function () {
     let loggger = log4js.getLogger()
 
 
-    let restMarginApi = new RestMarginApi("https://www.okex.com", "", "", "")
-    it('getEttAccounts', function (done) {
-        restMarginApi.getMarginAccounts().then(function (res) {
+    let restFuturesApi = new restFuturesApi("https://www.okex.com", "", "", "")
+    it('restFuturesApi', function (done) {
+        restFuturesApi.getFuturesPosition().then(function (res) {
             res.json().then(function (json) {
                 loggger.debug(json)
             })
