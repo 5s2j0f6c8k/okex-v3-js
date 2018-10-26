@@ -369,3 +369,6 @@ restEttApi.getEttAccounts().then(function (res) {
     })
 })
 ```
+
+## 模板
+https://github.com/qugang/okex-v3-js-template
