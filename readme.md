@@ -134,6 +134,65 @@ getOkexTime 获取服务时间
  
  getEttDefinePrice 获取ETT清算历史定价
 
+
+### RestFuturesApi 合约API
+
+getFuturesPosition() 合约持仓信息
+
+getFuturesPosition(instrument_id) 单个合约持仓信息
+
+getFuturesAccounts() 所有币种合约账户信息
+
+getFuturesLeverage(currency) 获取合约币种杠杆倍数   
+
+postFuturesLeverage 设定合约币种杠杆倍数
+
+getFuturesLedger(currency) 账单流水查询
+
+postFuturesOrder(client_oid, instrument_id, type, price, size, match_price, leverage) 下单 
+
+postFuturesOrders(instrument_id, leverage, orders_data) 批量下单
+
+postFuturesCancel_order(instrument_id, order_id) 撤销指定订单
+
+postFuturesCancel_batch_orders(instrument_id, order_ids)  批量撤销订单
+
+getFuturesOrdersByInstrument_id(instrument_id,status,from,to,limit) 获取订单列表
+
+getFuturesOrdersByInstrument_idAndOrderId(instrument_id,order_id) 获取订单信息
+
+getFuturesFills(order_id,instrument_id,from,to,limit) 获取成交明细      
+
+getFuturesInstruments() 获取币对信息
+
+getFuturesInstrumentsBook(instrument_id,size) 获取深度数据
+
+getFuturesInstrumentsTicker() 获取全部ticker信息
+
+getFuturesInstrumentsTickerByInstrument_id(instrument_id) 获取某个ticker信息
+ 
+getFuturesInstrumentsTradesByInstrument_id(instrument_id,from,to,limit) 获取成交数据
+
+getFuturesInstrumentsCandlesByInstrument_id(instrument_id,start,end,granularity) 获取K线数据
+
+getFuturesInstrumentsIndexByInstrument_id(instrument_id) 获取指数信息
+
+getFuturesRate() 获取法币汇率
+
+getFuturesInstrumentsEstimated_price(instrument_id) 获取预估交割价
+
+getFuturesInstrumentsOpen_interest(instrument_id) 获取平台总持仓量
+
+getFuturesInstrumentsPrice_limit(instrument_id) 获取当前限价
+
+getFuturesInstrumentsLiquidation(instrument_id,
+        status,
+        from,
+        to,
+        limit) 获取爆仓单
+
+getFuturesInstrumentsHolds(instrument_id) 获取合约挂单冻结数量
+
 ## 安装包
 
 ```js
