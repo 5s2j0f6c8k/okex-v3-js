@@ -134,6 +134,11 @@ getOkexTime 获取服务时间
  
  getEttDefinePrice 获取ETT清算历史定价
 
+## 安装包
+
+```js
+npm install 
+```
 
 ## Testing
 
