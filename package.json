@@ -1,6 +1,6 @@
 {
   "name": "okex-v3",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "okex v3",
   "keyword":[
     "okex",
@@ -29,5 +29,9 @@
   "readme":"使用手册https://github.com/qugang/okex-v3-js/blob/master/readme.md",
   "readmeFilename":"readme.md",
   "author": "qgass@163.com",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/qugang/okex-v3-js.git"
+  },
   "license": "ISC"
 }
